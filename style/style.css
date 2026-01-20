@@ -68,17 +68,24 @@
     justify-content: center;
     text-align: center;
     color: white;
+    
 }
 
 .circle1{
     position: relative;
-    
+      
     margin-bottom: 30px;
     padding-top: 30px;
 }
 
+
 .circle1-img{
     width: 100%;
+    
+    
+}
+.cir-img{
+    background-color: transparent;
 }
 
 .mic-img{
@@ -87,6 +94,7 @@
     left: 50%;
     width: 80px;
     transform: translate(-50%, -50%);
+    background-color: transparent;
     
 }
 .badge{
@@ -104,18 +112,21 @@
 h1{
     font-size: 48px;
     margin-bottom: 10px;
+    background-color: transparent;
 }
 
 p{
     max-width: 500px;
     font-size: 16px;
     opacity: 0.8;
+    background-color: transparent;
 }
 
 .buttons{
     margin-top: 25px;
     display: flex;
     gap: 15px;
+    background-color: transparent;
 }
 
 .btn{
@@ -123,11 +134,13 @@ p{
     border-radius: 25px;
     text-decoration: none;
     font-size: 14px;
+    ;
 }
 
 .spotify{
     background: linear-gradient(45deg, #ff00ff, #ffcc00);
     color: white;
+    
 }
 
 .subscribe{
@@ -138,11 +151,7 @@ p{
 
 /* about section */
 .about{
-    margin-top: 70px;
-    
-    
-    /* justify-content: flex-start; */
-    
+    margin-top: 70px;  
     gap: 80;
     padding: 50px 200px 120px 200px;
     
@@ -170,7 +179,7 @@ p{
     line-height: 20px;
     letter-spacing: 0%;
     text-align: center;
-    gap: 120px;
+    
 }
 .rating{
     display: flex;
@@ -194,24 +203,153 @@ p{
 }
 
 
+/* grid section */
+
+.why{
+    padding:80px 8%;
+}
+
+.why h2{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:60px;
+    color: #ffffff;
+}
+.grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+}
+.card{
+    background:#2a0f4f;
+    padding:35px;
+    border-radius:22px;
+}
+.icon{
+    width:40px;
+    margin-bottom:20px;
+    background-color: transparent;
+}
+
+.card h3{
+    margin-bottom:12px;
+    font-size:18px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.card p{
+    font-size:14px;
+    line-height:1.7;
+    opacity:0.8;
+    color: rgb(162, 162, 162);
+    background-color: transparent;
+}
+
+.big{
+    grid-row: span 2;
+}
+
+.wide{
+    grid-column: span 2;
+}
+
+
+/* iframe added */
+
+.episodes{
+    padding:80px 10%;
+    color: #ffffff;
+}
+
+.episodes h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:50px;
+  
+}
+.episode-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+   
+}
+.episode-card{
+    background:#2a0f4f;
+    border-radius:22px;
+    overflow:hidden;
+}
+.video-box{
+    position:relative;
+    aspect-ratio: 16 / 9;
+}
+.video-box iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+.content{
+    padding:25px;
+    background-color: #2a0f4f;
+}
+.content h3{
+    margin-bottom:10px;
+    color: #ffffff;
+    background-color: transparent;
+}
+.content p{
+    font-size:14px;
+    opacity:.8;
+    line-height:1.6;
+    color: #aeadad;
+}
+.time{
+    display:inline-block;
+    margin-top:12px;
+    color:#00ff99;
+    font-size:14px;
+    background-color: transparent;
+}
+
+/* host */
 
 
 
 
 
 
-/* responsive for mobile */
+
+
 @media screen and (max-width: 576px) {
     .frame, .btn-primary{
         display: none;
     }
     .navbar>span{
     color: #ffffff;
-    display: inline;
+    align-items: center;
+    }
+
+    .banner{
+        width: 400px;
+    }
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    .rating{
+        flex-direction: column;
+    }
+
+    .card.big,
+    .card.wide{
+        grid-column: span 2;
+        grid-row: span 1;    
+    }
+    
+    .episode-grid{
+        grid-template-columns:1fr;
+    }
 }
-  .banner{
-    width: 400px;
-  }
+
 
     
-}
+
