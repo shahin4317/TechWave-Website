@@ -63,7 +63,7 @@ body{
 .banner{
     
     max-width: 1600px;    
-    background: url("/image/hero-bg.png") no-repeat center/cover;
+    background: url("../image/hero-bg.png") no-repeat center/cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -389,7 +389,7 @@ p{
     width: 100%;
     padding: 60px 0;
     background-color: rgba(26, 11, 46, 1);
-    background-image: url('/image/footer-bg.png');
+    background-image: url('../image/footer-bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
